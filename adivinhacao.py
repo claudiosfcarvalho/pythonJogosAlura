@@ -10,10 +10,16 @@ print("Você digitou", chute)
 
 if(chute.isnumeric()):
     numero_chute = int(chute)
-    if(numero_secreto == numero_chute):
+    acertou = numero_chute == numero_secreto
+    maior   = numero_chute > numero_secreto
+    menor   = numero_chute < numero_secreto
+    if(acertou):
         print("Acertou")
     else:
-        print("Errou")
+        if(maior):
+            print("Errou! O seu chute foi maior do que o número secreto")
+        elif(menor):
+            print("Errou! O seu chute foi menor do que o número secreto")
 else:
     print("Somente números são aceitos")
 
