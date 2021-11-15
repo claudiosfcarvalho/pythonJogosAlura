@@ -1,4 +1,4 @@
-#Aula 5 - Praticando format
+import random
 print("Tentativa {} de {}".format(3,10))
 
 print("Tentativa {1} de {0}".format(3,10))
@@ -31,3 +31,20 @@ print(f"Meu nome é {nome.lower()}")
 print(f"Meu nome é {nome.upper()}")
 
 print(f"Meu nome é {nome.capitalize()}")
+
+print("numero randomico ",random.random())
+
+print("numero randomico de 0 a 100 ", random.randrange(0, 101))
+
+print("numero randomico de 1 a 100 ", random.randrange(1, 101))
+
+print("numero absoluto  ", abs(-10.8))
+
+print("numero arredondado ", round(10.8))
+
+print("divisao resultado float ", 3/2)
+
+print("divisao resultado float ", 2/2)
+
+#Sempre devolve valor inteiro sem arredondar
+print("divisao resultado abs com //  ", 3//2)
