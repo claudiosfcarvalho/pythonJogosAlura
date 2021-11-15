@@ -143,3 +143,14 @@ print(lista_quadrados)
 
 lista_divisao_por_dois = [n for n in inteiros if n % 2 == 0]
 print(lista_divisao_por_dois)
+
+#arquivos com python
+#nome arquivo, w - escrita | r - leitura | a - adicionar conteudo | rb - abrir uma imagem (b de binario) e wb para gravar
+arquivo = open("palavras.txt","w")
+arquivo.write("banana\n")
+arquivo.write("laranja\n")
+arquivo.write("morango\n")
+arquivo.write("melancia\n")
+arquivo.write("melao")
+print(arquivo)
+arquivo.close()
