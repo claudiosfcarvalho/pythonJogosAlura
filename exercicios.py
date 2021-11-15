@@ -71,3 +71,10 @@ print("bool(13.5) ", bool(13.5))
 print("bool(\"teste\") ", bool("teste"))
 
 print("bool(True) ", bool(True))
+
+# busca a primeira ocorrencia
+palavra = "banana"
+print(palavra.find("b"))
+
+for letra in palavra:
+    print(letra)
