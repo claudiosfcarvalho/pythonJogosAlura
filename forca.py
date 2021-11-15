@@ -9,7 +9,7 @@ def jogar():
     acertou = False
 
     while(not enforcou and not acertou):
-        
+        print("jogando")
     print("Fim do jogo")
 
 if(__name__ == "__main__"):

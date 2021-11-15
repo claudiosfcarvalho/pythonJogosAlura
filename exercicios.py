@@ -55,3 +55,19 @@ def soma(a, b):
     return a + b
 
 print(f"usando funcao soma 10 + 2 = {soma(10,2)}")
+
+print("bool(0) ", bool(0))
+
+print("bool("") ", bool(""))
+
+print("bool(None) ", bool(None))
+
+print("bool(1) ", bool(1))
+
+print("bool(-100) ", bool(-100))
+
+print("bool(13.5) ", bool(13.5))
+
+print("bool(\"teste\") ", bool("teste"))
+
+print("bool(True) ", bool(True))
