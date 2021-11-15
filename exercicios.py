@@ -85,7 +85,7 @@ print("banana".upper())
 
 print("    BANANA   ".strip())
 
-# frutas = ['banana', 'maca', 'pera']
+frutas = ['banana', 'maca', 'pera']
 # fruta_pedida = input('Qual é a fruta que deseja consultar? ')
 # if(fruta_pedida in frutas):
 #     print('Sim, temos a fruta')
@@ -132,3 +132,14 @@ for item in lista_set:
 #dictionary - utiliza as chaves como num set, mas sempre em pares (chave e valor)
 instrutores = {'Nico': 39, 'Flavio': 37, 'Marcos': 30}
 print(instrutores)
+
+#list comprehension
+lista_de_frutas = [fruta.upper() for fruta in frutas]
+print(lista_de_frutas)
+
+inteiros = [1,3,4,5,7,8]
+lista_quadrados = [n*n for n in inteiros]
+print(lista_quadrados)
+
+lista_divisao_por_dois = [n for n in inteiros if n % 2 == 0]
+print(lista_divisao_por_dois)

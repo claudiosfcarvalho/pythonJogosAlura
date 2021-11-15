@@ -9,12 +9,10 @@ def jogar():
     acertou = False
     tentativas = 0
     maximo_tentativas = 6
-    letras_acertadas = []
-    pos = 0
+    letras_acertadas = ["_" for letra in palavra_secreta]
 
-    while(pos < len(palavra_secreta)):
-        letras_acertadas.append("_")
-        pos = pos + 1
+    # for letra in palavra_secreta:
+    #     letras_acertadas.append("_")
 
     print(letras_acertadas)
 
@@ -33,6 +31,8 @@ def jogar():
             tentativas += 1
             print(f"Erro {tentativas} de {maximo_tentativas}")
 
+        # há várias formas de obter o acerto
+        # acertou = "_" not in letras_acertadas
         acertou = letras_acertadas.count("_") == 0
         enforcou = tentativas == maximo_tentativas
 
