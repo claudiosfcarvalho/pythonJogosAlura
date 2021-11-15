@@ -48,3 +48,10 @@ print("divisao resultado float ", 2/2)
 
 #Sempre devolve valor inteiro sem arredondar
 print("divisao resultado abs com //  ", 3//2)
+
+
+def soma(a, b):
+    print(f"Funcao SOMA : a ({a}) + b ({b})")
+    return a + b
+
+print(f"usando funcao soma 10 + 2 = {soma(10,2)}")

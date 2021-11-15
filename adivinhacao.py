@@ -1,4 +1,5 @@
 import random
+print("Import advinhacao ok")
 
 def jogar():
     print("*********************************")
@@ -13,7 +14,7 @@ def jogar():
     print("  (1) fácil \n  (2) médio \n  (3) difícil")
     nivel = int(input("Define o nível: "))
 
-    if (nivel == 1):
+    if(nivel == 1):
         total_de_tentativas = 20
     elif(nivel == 2):
         total_de_tentativas = 10
@@ -27,16 +28,16 @@ def jogar():
         validacao_ok = True
         numero_chute = 0
 
-        if (not chute.isnumeric()):
+        if(not chute.isnumeric()):
             print("Apenas números entre 1 e 100 são aceitos")
             validacao_ok = False
         else:
             numero_chute = int(chute)
-            if (numero_chute < 1 or numero_chute > 100):
+            if(numero_chute < 1 or numero_chute > 100):
                 print("Apenas números entre 1 e 100 são aceitos")
                 validacao_ok = False
 
-        if (validacao_ok):
+        if(validacao_ok):
             acertou = numero_chute == numero_secreto
             maior   = numero_chute > numero_secreto
             menor   = numero_chute < numero_secreto
@@ -50,7 +51,11 @@ def jogar():
                     print("Errou! O seu chute foi maior do que o número secreto\n")
                 elif(menor):
                     print("Errou! O seu chute foi menor do que o número secreto\n")
-    if (not acertou):
+    if(not acertou):
         print("O número secreto é", numero_secreto)
     print("Pontuação ", pontuacao)
     print("Fim do Jogo")
+
+if(__name__ == "__main__"):
+    print("Abrindo jogo")
+    jogar()
