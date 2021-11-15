@@ -1,12 +1,15 @@
+import random
+
 print("*********************************")
 print("Bem vind@ no jogo de Adivinhação!")
 print("*********************************")
 
-numero_secreto = 42
+#numero_secreto = round(random.random() * 100)
+numero_secreto = random.randrange(1,101)
 total_de_tentativas = 3
 
 for tentativa in range(1,total_de_tentativas + 1):
-    print("Tentativa {} de {}".format(tentativa, total_de_tentativas))
+    print("\nTentativa {} de {}".format(tentativa, total_de_tentativas))
     chute = input("Digite um número entre 1 e 100: ")
     print("Você digitou", chute)
     validacao_ok = True
@@ -27,12 +30,13 @@ for tentativa in range(1,total_de_tentativas + 1):
         menor   = numero_chute < numero_secreto
 
         if(acertou):
-            print("Acertou")
+            print("Acertou\n")
             break
         else:
             if(maior):
-                print("Errou! O seu chute foi maior do que o número secreto")
+                print("Errou! O seu chute foi maior do que o número secreto\n")
             elif(menor):
-                print("Errou! O seu chute foi menor do que o número secreto")
-
+                print("Errou! O seu chute foi menor do que o número secreto\n")
+if (not acertou):
+    print("O número secreto é", numero_secreto)
 print("Fim do Jogo")
