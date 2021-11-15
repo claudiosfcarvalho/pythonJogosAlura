@@ -39,7 +39,7 @@ for tentativa in range(1,total_de_tentativas + 1):
         acertou = numero_chute == numero_secreto
         maior   = numero_chute > numero_secreto
         menor   = numero_chute < numero_secreto
-        pontos_perdidos = abs(numero_secreto - numero_chute)
+        pontos_perdidos = round(abs(numero_secreto - numero_chute) / 3)
         pontuacao = pontuacao - pontos_perdidos
         if(acertou):
             print("Acertou\n")
