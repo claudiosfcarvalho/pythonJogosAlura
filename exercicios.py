@@ -85,13 +85,50 @@ print("banana".upper())
 
 print("    BANANA   ".strip())
 
-frutas = ['banana', 'maca', 'pera']
-fruta_pedida = input('Qual é a fruta que deseja consultar? ')
-if(fruta_pedida in frutas):
-    print('Sim, temos a fruta')
-else:
-    print('Não temos a fruta')
+# frutas = ['banana', 'maca', 'pera']
+# fruta_pedida = input('Qual é a fruta que deseja consultar? ')
+# if(fruta_pedida in frutas):
+#     print('Sim, temos a fruta')
+# else:
+#     print('Não temos a fruta')
 
 precos = [1525,1120,1464,1200,1330,1356,1312,1531,1232, 1234,1250,1114,1553,1147,1303,1296,1309,1404,1479,1376,1152,1440,1038,1018,1291,1388,1577,1115,1488,1494,1254,1230,1122,1396,1208,1356,1549,1116,1443,1075,1536,1542,1036,1015,1020,1217,1484,1032,1390,1026 ]
 print(min(precos))
 print(len(precos))
+
+print(precos.count(1200))
+teste_range = range(3, 10)
+print(teste_range[0],teste_range[1])
+
+dias_da_semana_normal = ['S','T','Q','Q','S','S','D']
+print(dias_da_semana_normal)
+#lista do tipo tuple
+dias_da_semana_imutavel = ('S','T','Q','Q','S','S','D')
+print(dias_da_semana_imutavel)
+print(len(dias_da_semana_imutavel))
+
+p1 = (3,5)
+p2 = (4,6)
+p3 = (5,7)
+linha = [p1, p2, p3]
+print(linha)
+
+#converter lista em tuple e tuple em lista
+lista_tuple = tuple(dias_da_semana_normal)
+print(lista_tuple)
+lista_normal = list(lista_tuple)
+print(lista_normal)
+
+#usando set - lista que nao permite numeros repetidos
+lista_set = {1,2,3}
+print(lista_set)
+lista_set.add(1)
+print(lista_set)
+
+#set nao possui indice e para acessar usar um for
+for item in lista_set:
+    print(item)
+
+#dictionary - utiliza as chaves como num set, mas sempre em pares (chave e valor)
+instrutores = {'Nico': 39, 'Flavio': 37, 'Marcos': 30}
+print(instrutores)
