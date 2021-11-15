@@ -1,12 +1,11 @@
-import random
+import arquivo
 
-print("Import forca ok")
 def jogar():
     print("*********************************")
     print("Bem vind@ no jogo de Forca!")
     print("*********************************")
 
-    palavra_secreta = obter_palavra()
+    palavra_secreta = arquivo.obter_palavra()
     enforcou = False
     acertou = False
     tentativas = 0
@@ -45,19 +44,6 @@ def jogar():
     else:
         print("Você errou")
     print("Fim do jogo")
-
-def obter_palavra():
-    arquivo = open("palavras.txt", "r")
-    palavras = []
-
-    for linha_arquivo in arquivo:
-        palavras.append(linha_arquivo.strip().upper())
-
-    arquivo.close()
-    # print("lista de palavras", palavras)
-    index = random.randrange(0,len(palavras))
-    palavra = palavras[index]
-    return palavra
 
 if(__name__ == "__main__"):
     print("Abrindo jogo")
