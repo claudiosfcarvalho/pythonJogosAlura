@@ -1,8 +1,8 @@
 import random
 
-def obter_palavra():
+def obter_palavra(nome_arquivo):
     palavra = "banana"
-    with open("palavras.txt", "r") as arquivo:
+    with open(nome_arquivo, "r") as arquivo:
         palavras = []
 
         for linha_arquivo in arquivo:

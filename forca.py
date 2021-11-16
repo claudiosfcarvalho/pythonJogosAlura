@@ -1,36 +1,34 @@
 import arquivo
+import mensagens
+
+nome_arquivo = "palavras.txt"
+def mensagem_enforcou(palavra_secreta):
+    mensagens.imprimir_mensagem_perdeu()
 
 def jogar():
-    print("*********************************")
-    print("Bem vind@ no jogo de Forca!")
-    print("*********************************")
+    mensagens.imprimir_mensagem_abertura("Forca")
 
-    palavra_secreta = arquivo.obter_palavra()
+    palavra_secreta = arquivo.obter_palavra(nome_arquivo)
+
     enforcou = False
     acertou = False
     tentativas = 0
-    maximo_tentativas = 6
-    letras_acertadas = ["_" for letra in palavra_secreta]
+    maximo_tentativas = 7
 
-    # for letra in palavra_secreta:
-    #     letras_acertadas.append("_")
+    letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
 
     print(letras_acertadas)
 
     while(not enforcou and not acertou):
 
-        chute = input("Qual letra? ")
-        chute = chute.strip().upper()
-        index = 0
+        chute = pede_letra()
 
         if(chute in palavra_secreta):
-            for letra in palavra_secreta:
-                if(chute == letra):
-                    letras_acertadas[index] = letra
-                index += 1
+            marcar_chute_correto(chute, letras_acertadas, palavra_secreta)
         else:
             tentativas += 1
             print(f"Erro {tentativas} de {maximo_tentativas}")
+            mensagens.imprimir_forca(tentativas)
 
         # há várias formas de obter o acerto
         # acertou = "_" not in letras_acertadas
@@ -40,10 +38,25 @@ def jogar():
         print(letras_acertadas)
 
     if(acertou):
-        print("Você acertou")
+        mensagens.imprimir_mensagem_ganhou()
     else:
-        print("Você errou")
-    print("Fim do jogo")
+        mensagem_enforcou(palavra_secreta)
+
+
+def marcar_chute_correto(chute, letras_acertadas, palavra_secreta):
+    index = 0
+    for letra in palavra_secreta:
+        if (chute == letra):
+            letras_acertadas[index] = letra
+        index += 1
+    # return letras_acertadas
+
+def pede_letra():
+    chute = input("Qual letra? ")
+    return chute.strip().upper()
+
+def inicializa_letras_acertadas(palavra_secreta):
+    return ["_" for letra in palavra_secreta]
 
 if(__name__ == "__main__"):
     print("Abrindo jogo")
